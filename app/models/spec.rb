@@ -6,7 +6,7 @@ class Spec < ActiveRecord::Base
 	has_and_belongs_to_many :specs
 
 	def self.search(query)
-		where("title like ?", "%#{query}%") + where("content like ?", "%#{query}%")
+		where("title ilike ?", "%#{query}%") + where("content ilike ?", "%#{query}%")
 	end
 
 end
