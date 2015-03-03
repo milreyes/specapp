@@ -8,6 +8,13 @@ body {
 	padding-top: 5%;
 }
 
+body a {
+	color: blue;
+	&:hover {
+		color: darken(blue, 30%);
+	}
+}
+
 h1 {
 	color: #666;
 }
