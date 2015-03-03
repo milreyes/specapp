@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 gem 'faker', '~> 1.4.3'
 
 gem 'pg'
+
+gem "omniauth-google-oauth2"
