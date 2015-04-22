@@ -40,3 +40,7 @@ gem 'spring',        group: :development
 gem 'faker', '~> 1.4.3'
 
 gem 'pg'
+
+# Installing bootstrap
+
+gem 'bootstrap-sass', '~> 3.3.4'
