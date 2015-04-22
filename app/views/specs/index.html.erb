@@ -1,7 +1,5 @@
 <h1>These are the specs</h1>
 
-<h2 class="new-spec"><%=link_to "Create New Spec", new_spec_path %></h2>
-
 <% @specs.each do |s| %>
 	<h3><%=link_to s.title, spec_path(s) %></h3>
 <% end %>
