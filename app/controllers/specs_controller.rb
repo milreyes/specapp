@@ -51,6 +51,6 @@ class SpecsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spec_params
-      params.require(:spec).permit(:title, :content)
+      params.require(:spec).permit(:title, :content, :image)
     end
 end

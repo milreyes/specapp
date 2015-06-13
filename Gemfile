@@ -44,3 +44,6 @@ gem 'pg'
 # Installing bootstrap
 
 gem 'bootstrap-sass', '~> 3.3.4'
+
+
+gem "paperclip", "~> 4.2"

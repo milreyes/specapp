@@ -2,5 +2,10 @@
 
 <p> <%= @spec.content %> <p>
 
+	<%= image_tag @spec.image.url %>
+	<%= image_tag @spec.image.url(:large) %>
+	<%= image_tag @spec.image.url(:medium) %>
+	<%= image_tag @spec.image.url(:thumb) %>
+
 <%= link_to "Back to all Specs", specs_path %>
 <%= link_to "Edit Spec", edit_spec_path(@spec) %>
