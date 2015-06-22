@@ -1,6 +1,7 @@
 class SpecsController < ApplicationController
 
 	before_action :set_spec, only: [:show, :edit, :update, :destroy]
+	before_action :confirm_admin, only: [:edit, :update, :destroy]
 
 	def index
 		@specs = Spec.all
@@ -53,4 +54,11 @@ class SpecsController < ApplicationController
     def spec_params
       params.require(:spec).permit(:title, :content, :image)
     end
+
+    # For CRUD operations on specs, the user must be an admin.
+    def confirm_admin
+    	unless User.find_by(id: session[:user_id]).admin?
+  			render action: :show, notice:"You are not allowed to change this."
+  		end
+  	end
 end

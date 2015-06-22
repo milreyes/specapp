@@ -5,6 +5,16 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  before_action :authorize
+
+  protected
+
+  	def authorize
+  		unless User.find_by(id: session[:user_id])
+  			redirect_to log_in_url, notice:"Please log in"
+  		end
+  	end
+
   private
 
   def current_user
