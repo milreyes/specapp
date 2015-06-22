@@ -58,7 +58,8 @@ class SpecsController < ApplicationController
     # For CRUD operations on specs, the user must be an admin.
     def confirm_admin
     	unless User.find_by(id: session[:user_id]).admin?
-  			render action: :show, notice:"You are not allowed to change this."
+  			flash[:error] = "You are not allowed to change this."
+  			redirect_to spec_path
   		end
   	end
 end

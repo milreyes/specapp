@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
 
   	def authorize
   		unless User.find_by(id: session[:user_id])
-  			redirect_to log_in_url, notice:"Please log in"
+  			flash[:error] = "You must log in to access this."
+  			redirect_to log_in_url
   		end
   	end
 
