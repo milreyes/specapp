@@ -12,14 +12,10 @@
 
 	<h1 class="page-title"><%= link_to "KKM Relocation Specs Webpage", specs_path %></h1>
 	 <% flash.each do |type, message| %>
-	  <div class="alert flash <%= type %>">
+	  <div class="alert flash <%= type %> bg-info">
 	    <%= message %>
 	  </div>
 	  <% end %>
-
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
 
 	<!-- Source: http://www.jorgecoca.com/buils-search-form-ruby-rails/ -->
 	<div class="search-bar">
