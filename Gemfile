@@ -49,4 +49,4 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem "paperclip", "~> 4.2"
 
 gem 'rails_12factor', group: :production
-ruby "2.1.1"
+ruby "2.2.0", group: :production
